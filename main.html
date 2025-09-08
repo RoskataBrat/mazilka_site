@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Реновираща мазилка — Професионални услуги</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2b8aef;
+      --secondary: #0f1724;
+      --text: #333;
+      --muted: #666;
+      --bg: #f9fafb;
+      --white: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    /* Header */
+    header {
+      background: url('https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+      color: var(--white);
+      text-align: center;
+      padding: 4rem 2rem;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.55);
+    }
+
+    header h1 {
+      position: relative;
+      font-size: 2.5rem;
+      font-weight: 700;
+      z-index: 1;
+    }
+
+    header p {
+      position: relative;
+      margin-top: 0.75rem;
+      font-size: 1.1rem;
+      z-index: 1;
+    }
+
+    /* Hero */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      margin: 4rem 0;
+    }
+
+    .hero-left {
+      flex: 1;
+    }
+
+    .hero-left h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--secondary);
+    }
+
+    .hero-left p {
+      margin-bottom: 1.5rem;
+      color: var(--muted);
+    }
+
+    .cta {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background-color: #1f6ed0;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+
+    .hero-right img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .card {
+      background-color: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 1rem;
+    }
+
+    .card-body h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--secondary);
+    }
+
+    .card-body p {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--secondary);
+      color: var(--white);
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+
+    footer .footer-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    footer h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contacts .contact-item {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .contacts a {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .contacts a:hover {
+      text-decoration: underline;
+    }
+
+    footer .copyright {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #bbb;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-left h2 {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Реновираща мазилка</h1>
+    <p>Защита, дълготрайност и свежест за вашите стени</p>
+  </header>
+
+  <div class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-left">
+        <h2>Професионално решение</h2>
+        <p>Специализирани реновиращи мазилки за справяне с влага, изсолявания и старо напукване. Висока паропропускливост, устойчивост на соли и дълготрайна защита — подходящи за фасади, сутерени и реставрационни обекти.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="mailto:info@firma.bg?subject=Запитване%20за%20реновираща%20мазилка">Запитване по имейл</a>
+          <a class="btn btn-outline" href="tel:+359888123456">Обадете се: +359 88 812 3456</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1200&auto=format&fit=crop" alt="Реновираща мазилка">
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery">
+      <article class="card">
+        <img src="images/mazilka_1.jpg" alt="Почистване и подготовка">
+        <div class="card-body">
+          <h3>Почистване и подготовка</h3>
+          <p>Премахваме старите наслагвания и обработваме повърхността преди нанасяне на реновираща мазилка.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/mazilka_2.jpg" alt="Нанасяне на мазилка">
+        <div class="card-body">
+          <h3>Професионално полагане</h3>
+          <p>Нанасяме системата слоеве по слой — реновираща замазка, основен слой и финишна шпакловка.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/mazilka_3.jpg" alt="Готова фасада">
+        <div class="card-body">
+          <h3>Дълготраен резултат</h3>
+          <p>Резултатът е здрава, дишаща и естетична повърхност, готова за финален цвят или декорация.</p>
+        </div>
+      </article>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h2>Свържете се с нас</h2>
+        <p>Готови сме да направим оценка на място и да предложим индивидуално решение.</p>
+      </div>
+      <div class="contacts">
+        <div class="contact-item"><strong>Телефон:</strong> <a href="tel:+359888123456">+359 88 812 3456</a></div>
+        <div class="contact-item"><strong>Имейл:</strong> <a href="mailto:info@firma.bg">info@firma.bg</a></div>
+        <div class="contact-item"><strong>Адрес:</strong> гр. София, ул. Пример 12</div>
+      </div>
+    </div>
+    <div class="copyright">© 2025 Реновираща мазилка. Всички права запазени.</div>
+  </footer>
+</body>
+</html>
+
