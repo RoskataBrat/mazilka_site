@@ -76,6 +76,42 @@
       z-index: 1;
     }
 
+    /* Navbar */
+.navbar {
+  position: relative;
+  z-index: 2;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--white);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--white);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+
     /* Hero */
     .hero {
       display: flex;
@@ -240,10 +276,22 @@
 </head>
 <body>
   <!-- Header -->
-  <header>
-    <h1>Реновираща мазилка</h1>
-    <p>Защита, дълготрайност и свежест за вашите стени</p>
-  </header>
+<header>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">Реновираща мазилка</a>
+      <ul class="nav-links">
+        <li><a href="#">Начало</a></li>
+        <li><a href="#hero">Услуги</a></li>
+        <li><a href="#gallery">Галерия</a></li>
+        <li><a href="#footer">Контакти</a></li>
+      </ul>
+    </div>
+  </nav>
+  <h1>Реновираща мазилка</h1>
+  <p>Защита, дълготрайност и свежест за вашите стени</p>
+</header>
+
 
   <div class="container">
     <!-- Hero -->
