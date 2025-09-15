@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Реновираща мазилка — Професионални услуги</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="index.js" defer></script>
   <style>
     :root {
       --primary: #2b8aef;
@@ -109,6 +110,38 @@
 
 .nav-links a:hover {
   color: var(--primary);
+}
+
+/* Hamburger button hidden on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--white);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(15, 23, 36, 0.95);
+    flex-direction: column;
+    width: 200px;
+    padding: 1rem;
+    gap: 1rem;
+    display: none;
+    border-radius: 6px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
 
 
@@ -280,17 +313,27 @@
   <nav class="navbar">
     <div class="nav-container">
       <a href="#" class="logo">Реновираща мазилка</a>
-      <ul class="nav-links">
+
+      <!-- Hamburger button for mobile -->
+      <div class="menu-toggle" id="menu-toggle">
+        ☰
+      </div>
+
+      <ul class="nav-links" id="nav-links">
         <li><a href="#">Начало</a></li>
-        <li><a href="#hero">Услуги</a></li>
+        <li><a href="services.html">Услуги</a></li>
         <li><a href="#gallery">Галерия</a></li>
         <li><a href="#footer">Контакти</a></li>
+        <li><a href="#about">За нас</a></li>
+        <li><a href="#faq">Въпроси</a></li>
       </ul>
     </div>
   </nav>
+
   <h1>Реновираща мазилка</h1>
   <p>Защита, дълготрайност и свежест за вашите стени</p>
 </header>
+
 
 
   <div class="container">
